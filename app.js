@@ -378,6 +378,6 @@ app.get("/logout",(req,res)=>{
 app.get("*",(req,res)=>{
   res.send("Error 404 Page Not Found");
 })
-app.listen("3000",()=>{
+app.listen("3000"||process.env.PORT,()=>{
   console.log("working in port 3000");
 })
