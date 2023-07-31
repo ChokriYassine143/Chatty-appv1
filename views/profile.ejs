@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Information</title>
+  <style>
+    .profile-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #84738c;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      width: 400px;
+      height: 800px;
+    }
+
+    .profile-picture-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 75px;
+    }
+
+    .profile-picture {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .edit-icon {
+      font-size: 14px;
+      margin-left: 5px;
+      color: #070707;
+      cursor: pointer;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-name {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 75px;
+      display: flex;
+      align-items: center;
+    }
+
+    .profile-email {
+      margin: 0;
+      font-size: 16px;
+      color: #000000;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  
+  
+  <div class="profile-container">
+    <div class="profile-picture-container">
+      <img src="<%= avatar %>" alt="Profile Picture" class="profile-picture">
+    <a href=""><span  id="chp"class="edit-icon">✎</span></a>  
+    </div>
+    <div class="profile-info">
+        <p>Your Name: </p>
+      <h3 class="profile-name">
+       <%= fn%> 
+        <a href=""><span class="edit-icon">✎</span></a>  
+      </h3>
+      <p class="profile-email">
+        <p>Your Name: </p>
+        <%= em %> 
+        <a href=""><span class="edit-icon">✎</span></a>  
+      </p>
+    </div>
+  </div>
+ 
+  
+</body>
+</html>

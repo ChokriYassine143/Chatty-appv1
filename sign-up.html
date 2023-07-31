@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form</title>
+    <link rel="stylesheet" type="text/css" href="css/stylesiu.css">
+</head>
+<body>
+    <div class="signup-form">
+        <h2>Create an Account</h2>
+
+        <form action="/signup" method="post">
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="&#x2709;    Email" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="username" name="username" placeholder="👤    Username" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="&#x1F512;    Password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="&#x1F512;    Confirm Password" required>
+            </div>
+            <input type="submit" value="Sign Up">
+        </form>
+
+        <p class="signup-ref">Already have an account? <a href="/">Log in</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styleconv.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/quickblox/quickblox.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Home</title>
+</head>
+<body>
+  <div id="sidebar">
+    <div class="icon home">Home</div>
+    <div class="icon chats">Chat</div>
+    <div class="icon notification">Notification</div>
+    <div class="icon settings">Settings</div>
+     <div id="lg"class="icon logout">logout</div>
+  </div>
+
+  <div class="container1">
+    <div id="search-bar">
+      <input type="text" id="search-input" placeholder="Search for a user...">
+      <ul id="search-results"></ul>
+    </div>
+    <div class="chat" id="chatContainer">
+      <% chats.forEach((chat) => { %>
+       
+        <a name="<%= chat.id %>" id="ch"> 
+          <input type="hidden" id="oc" value="<%= chat.ouccup %>"> 
+          <div class="message">
+            <div class="avatar">
+              <img src="https://i.pravatar.cc/40?img=3" alt="John's Profile Picture">
+            </div>
+            <div class="message-content">
+              <div class="sender"><%= chat.name %></div>
+              <% if (chat.lastMessage) { %>
+                <div class="content"><%= chat.lastMessage %></div>
+              <% } else { %>
+                <div class="content">No messages</div>
+              <% } %>
+            </div>
+          </div>
+        </a>
+      <% }) %>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header">
+      <div class="conversation-info">
+        <img src="/img/pf.jpeg" alt="Profile Picture" class="profile-picture">
+        <div class="conversation-name"></div>
+      </div>
+      <div class="button-container">
+        <button class="button"><img  id ="ph" src="/img/ca.jpeg" alt="Phone Icon"></button>
+        <button class="button"><img src="/img/vd.jpeg" alt=""></button>
+        <button class="button"><img src="/img/3d.jpeg" alt="Menu Icon"></button>
+      </div>
+    </div>
+    <div class="conversation" id="msgs">
+
+      <% messages.forEach((message) => { %>
+      
+        <div class="message message-contents">
+          <div class="message-content"><%= message %></div>
+        </div>
+       <% }) %>
+
+    </div>
+    <div class="bottom-section">
+             <input type="text" class="message-input" name="message" id="ss" placeholder="Type a message...">
+        <button class="send-button" id="bt">Send</button>
+    
+    </div>
+  </div>
+  <video id="myVideoElementId" autoplay></video>
+
+  <script src="/script.js">
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Failure Message Example</title>
+	<style>
+		.failure-message {
+			background-color: #f8d7da;
+			color: #721c24;
+			padding: 10px;
+			border-radius: 5px;
+			margin: 10px;
+			font-weight: bold;
+			text-align: center;
+		}
+		
+		.try-again-btn {
+			background-color: #dc3545;
+			color: #fff;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>   <from action="/failure" method="post"></from>
+	<div class="failure-message">
+		Oops! Something went wrong. Please try again later.
+        <br>
+     
+		<a href="/signup"><button  class="try-again-btn" type="submit">Try Again </button> </a>
+ 
+    </div>
+</from>	
+</body>
+</html>
